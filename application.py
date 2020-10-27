@@ -9,7 +9,7 @@ os.chdir(os.path.dirname(__file__))
 with open('model/decision_tree.pkl', 'rb') as fp:
     model = pkl.load(fp)
 
-@app.route('/', methods=['POST'])
+@app.route('/predict', methods=['POST'])
 def predict():
     request_json = request.get_json()
     predict_list = [
@@ -23,6 +23,7 @@ def predict():
     return make_response(prediction, 200)
 
 
+@app.route('/')
 @app.route('/available')
 @app.route('/health')
 @app.route('/ready')
