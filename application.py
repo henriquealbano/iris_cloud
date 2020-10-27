@@ -11,16 +11,16 @@ with open('model/decision_tree.pkl', 'rb') as fp:
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    request_json = request.get_json()
-    predict_list = [
-        request_json["sepal_length_cm"],
-        request_json["sepal_width_cm"],
-        request_json["petal_length_cm"],
-        request_json["petal_width_cm"]
-        ]
+    # request_json = request.get_json()
+    # predict_list = [
+    #     request_json["sepal_length_cm"],
+    #     request_json["sepal_width_cm"],
+    #     request_json["petal_length_cm"],
+    #     request_json["petal_width_cm"]
+    #     ]
 
     # prediction = model.predict([predict_list])[0]
-    return make_response(','.join(predict_list), 200)
+    return make_response('response', 200)
 
 @app.route("/")
 def hello():
