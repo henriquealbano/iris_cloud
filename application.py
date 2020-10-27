@@ -29,4 +29,4 @@ def hello():
 
 @app.route("/test")
 def hello_test():
-    return test.ret_message()
+    return "Hello from test.py"
