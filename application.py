@@ -24,7 +24,7 @@ def predict():
         return make_response( prediction, 200)
 
     except Exception as e:
-        return make_response(str(e), 200)
+        return make_response(str(e), 500)
 
 @app.route("/")
 def hello():
