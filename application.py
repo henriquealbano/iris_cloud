@@ -20,7 +20,7 @@ def predict():
         ]
 
     # prediction = model.predict([predict_list])[0]
-    return make_response(','.join(predict_list), 200)
+    return make_response(",".join(map(str, predict_list)), 200)
 
 @app.route("/")
 def hello():
@@ -30,3 +30,6 @@ def hello():
 def hello_test():
     ls_list = os.listdir()
     return ','.join(ls_list)
+
+if __name__ == "__main__":
+    app.run()
