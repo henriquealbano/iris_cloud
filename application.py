@@ -20,11 +20,11 @@ def predict():
             request_json["petal_width_cm"]
             ]
 
-        prediction = model.predict([predict_list])[0]
+        prediction = model.predict([predict_list,8])[0]
         return make_response(",".join(map(str, predict_list)), 200)
 
     except Exception as e:
-        return make_response(e.message, 500)
+        return make_response(str(e), 200)
 
 @app.route("/")
 def hello():
