@@ -11,7 +11,7 @@ with open('model/decision_tree.pkl', 'rb') as fp:
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    # request_json = request.get_json()
+    request_json = request.get_json()
     # predict_list = [
     #     request_json["sepal_length_cm"],
     #     request_json["sepal_width_cm"],
