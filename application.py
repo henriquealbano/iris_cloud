@@ -20,7 +20,7 @@ def predict():
         ]
 
     # prediction = model.predict([predict_list])[0]
-    return make_response('response', 200)
+    return make_response(','.join(predict_list)), 200)
 
 @app.route("/")
 def hello():
