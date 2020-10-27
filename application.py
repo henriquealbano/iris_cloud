@@ -6,8 +6,8 @@ import pickle as pkl
 app = Flask(__name__)
 
 # os.chdir(os.path.dirname(__file__))
-with open('decision_tree.pkl', 'rb') as fp:
-    model = pkl.load(fp)
+# with open('decision_tree.pkl', 'rb') as fp:
+#     model = pkl.load(fp)
 
 @app.route('/predict', methods=['POST'])
 def predict():
