@@ -21,7 +21,7 @@ def predict():
             ]
 
         prediction = model.predict([predict_list])[0]
-        return make_response(",".join(map(str, predict_list)), 200)
+        return make_response( prediction, 200)
 
     except Exception as e:
         return make_response(str(e), 200)
