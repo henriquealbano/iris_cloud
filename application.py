@@ -20,7 +20,7 @@ def predict():
             request_json["petal_width_cm"]
             ]
 
-        # prediction = model.predict([predict_list])[0]
+        prediction = model.predict([predict_list])[0]
         return make_response(",".join(map(str, predict_list)), 200)
 
     except Exception as e:
