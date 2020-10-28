@@ -17,7 +17,8 @@ def index():
 @app.route('/predict', methods=['POST'])
 def predict():
     try:
-        request_dict = request.form
+        request_dict = request.form if request.form else request.get_json()
+
         predict_list = [
             request_dict["sepal_length_cm"],
             request_dict["sepal_width_cm"],

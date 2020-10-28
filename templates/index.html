@@ -1,34 +1,22 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='default.css') }}">
-    <title>{{title}}</title>
+<html>
 
-    <script language="JavaScript">
-        function send(form){
-        }
-    </script>
+    <body>
 
-</head>
+        <form id="create" method="POST" action=/predict>
+            <label for="fname">sepal_length_cm:</label><br>
+            <input type="text" id="fname" name="sepal_length_cm"><br>
+            <label for="lname">sepal_width_cm:</label><br>
+            <input type="text" id="lname" name="sepal_width_cm"><br>
+            <label for="fname">petal_length_cm:</label><br>
+            <input type="text" id="fname" name="petal_length_cm"><br>
+            <label for="lname">petal_width_cm:</label><br>
+            <input type="text" id="lname" name="petal_width_cm">
+            <input type="submit" id="submit-button" value="Submit">
+            <div id=created></div>
+        </form>
+        </script>
 
-
-
-<body>
-
-    <form id="create" method="POST" action=/predict>
-        <label for="fname">sepal_length_cm:</label><br>
-        <input type="text" id="fname" name="sepal_length_cm"><br>
-        <label for="lname">sepal_width_cm:</label><br>
-        <input type="text" id="lname" name="sepal_width_cm"><br>
-        <label for="fname">petal_length_cm:</label><br>
-        <input type="text" id="fname" name="petal_length_cm"><br>
-        <label for="lname">petal_width_cm:</label><br>
-        <input type="text" id="lname" name="petal_width_cm">
-        <input type="submit" id="submit-button" value="Submit">
-        <div id=created></div>
-    </form>
-    </script>
-
-</body>
+    </body>
 
 </html>
